@@ -19,7 +19,9 @@ def test_gauge():
         widgets=[
             Bar(
                 size=Dimension(400, 30),
-                reading=lambda: 9
+                reading=lambda: 9,
+                cr=15,
+                outline_width=2
             )
         ]
     )
@@ -38,3 +40,5 @@ def test_gauge_negative():
             )
         ]
     )
+
+test_gauge()

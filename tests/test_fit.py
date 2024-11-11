@@ -33,3 +33,8 @@ def test_converting_fit_with_power_to_timeseries():
     assert item.power == units.Quantity(80, units.watt)
     assert item.odo == units.Quantity(114.96, units.m)
     assert item.gpsfix == 3
+
+def test_stryd_sensor():
+    ts = fit.load_timeseries(file_path_of_test_asset("stryd_sensor.fit", in_dir="fit"), units)
+    print(ts.items()[10])
+test_stryd_sensor()

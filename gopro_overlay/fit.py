@@ -27,6 +27,17 @@ interpret = {
     "power": lambda f, u: {"power": u.Quantity(f.value, u.watt)},
     "grade": lambda f, u: {"grad": u.Quantity(f.value)},
     "Sdps": lambda f, u: {"sdps": u.Quantity(f.value, u.cm)},
+    #### Stryd Sensor Parameters
+    "Power": lambda f, u: {"stryd_power": u.Quantity(f.value, u.watt)},
+    "Form Power": lambda f, u: {"stryd_form_power": u.Quantity(f.value, u.watt)},
+    "Leg Spring Stiffness": lambda f, u: {"stryd_lss": u.Quantity(f.value, u.lss)},
+    "Cadence":  lambda f, u: {"stryd_cadence": u.Quantity(f.value, u.rpm)},
+    "Ground Time":  lambda f, u: {"stryd_gct": u.Quantity(f.value, u.ms)},
+    "Vertical Oscillation":  lambda f, u: {"stryd_vo": u.Quantity(f.value, u.cm)},
+    "Air Power":  lambda f, u: {"stryd_airpower": u.Quantity(f.value, u.watt)},
+    "Stryd Humidity":  lambda f, u: {"stryd_humidity": u.Quantity(f.value, u.percent)},
+    "Stryd Temperature":  lambda f, u: {"stryd_temp": u.Quantity(f.value, u.degC)},
+    "Impact Loading Rate":  lambda f, u: {"stryd_ilr": u.Quantity(f.value, u.ilr)},
 }
 
 
