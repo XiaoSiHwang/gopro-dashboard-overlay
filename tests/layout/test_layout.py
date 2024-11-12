@@ -162,6 +162,17 @@ def test_render_xml_component_with_exclusions():
                                include=lambda name: name == "alice"
                            ))
 
+@approve_image
+def test_test():
+    xmldoc = load_xml_layout(Path("test"))
+
+    with renderer.open() as map_renderer:
+        return time_layout(
+            "default",
+            layout_from_xml(xmldoc, map_renderer, framemeta, font, privacy=NoPrivacyZone()),
+            dimensions=Dimension(2704, 1520)
+        )
+
 
 def time_layout(name, layout, repeat=20, dimensions=Dimension(1920, 1080)):
     supplier = SimpleFrameSupplier(dimensions)
@@ -178,3 +189,6 @@ def time_layout(name, layout, repeat=20, dimensions=Dimension(1920, 1080)):
         draw.show()
 
     return draw
+
+
+test_test()

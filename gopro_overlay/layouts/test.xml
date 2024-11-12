@@ -1,0 +1,37 @@
+<layout>
+  <translate x="1600" y="24">
+      <frame width="300" opacity="0.6" height="300" bg="80,80,80" cr="20">
+        <component type="cairo_circuit_map" size="300" fill="254,103,6" outline="0,0,0" line-width="0.03" loc-size="0.03" loc-fill="255,0,0" loc-outline="255,0,0" rotate="270"/>
+      </frame>
+  </translate>
+  
+  <translate x="24" y="24">
+    <frame width="294" opacity="1" height="190" bg="147,112,219" cr="20">
+      <component type="metric" x="58" y="2" metric="hr" dp="0" size="80" outline_width="0" rgb="255,255,255" />
+      <component type="icon" x="220" y="8" file="heartbeat.png" size="48" invert="false"/>
+      <component type="text" x="210" y="48" size="32" outline_width="0" rgb="255,255,255">BPM</component>
+
+      <translate x="0" y="90">
+        <component type="zone-bar" width="294" height="24" metric="hr" units="bpm" max="190" z1="127" z2="149" z3="172" />
+      </translate>
+      <component type="metric" x="36" y="118" metric="cadence"  units="spm"  dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="text" x="16" y="162" size="24" outline_width="0" rgb="0,0,0">STEPS/MIN</component>
+
+      <component type="metric" x="164" y="118" metric="speed"  units="pace_km" format="pace" dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="text" x="235" y="162" size="24" outline_width="0" rgb="0,0,0">/KM</component>
+    </frame>
+  </translate>
+
+  <translate x="637" y="24">
+    <frame width="646" opacity="1" height="136" bg="255,255,255" cr="20">
+      <!-- <component type="metric" x="205" y="4" metric="alt" format="elapsedtime" size="60" rgb="0,0,0"></component> -->
+      <translate x="3" y="70">
+        <component type="bar" cr="20" width="640" height="24" metric="odo"  min="0" max="20" fill="82,82,82" outline="82,82,82" zero="255,255,255" bar="30,144,255"  />
+      </translate>
+    
+    </frame>
+
+  
+  </translate>
+
+</layout>
