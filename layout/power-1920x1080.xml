@@ -1,20 +1,20 @@
  <layout>
-  <translate x="1600" y="24">
+  <translate x="1600" y="100">
       <frame width="300" opacity="0.6" height="300" bg="80,80,80" cr="20">
         <component type="cairo_circuit_map" size="300" fill="254,103,6" outline="0,0,0" line-width="0.03" loc-size="0.03" loc-fill="255,0,0" loc-outline="255,0,0" rotate="270"/>
       </frame>
   </translate>
   
-  <translate x="24" y="24">
-    <frame width="294" opacity="1" height="280" bg="147,112,219" cr="20">
+  <translate x="24" y="100">
+    <frame width="300" opacity="1" height="280" bg="51, 193, 255" cr="20">
       <component type="metric" x="58" y="2" metric="stryd_power" dp="0" size="80" outline_width="0" rgb="255,255,255" />
       <component type="icon" x="220" y="8" file="power.png" size="48" invert="false"/>
       <component type="text" x="210" y="48" size="32" outline_width="0" rgb="255,255,255">Watts</component>
 
       <translate x="0" y="90">
-        <component type="zone-bar" width="294" height="24" metric="stryd_power" max="360" z1="216" z2="243" z3="270" />
+        <component type="zone-bar" width="300" height="24" metric="stryd_power" max="360" z1="216" z2="243" z3="270"  z0-rgb="255,232,24" z1-rgb="255,202,24" z2-rgb="255,173,24" z3-rgb="230, 116,36" />
       </translate>
-      <component type="metric" x="36" y="118" metric="cadence"   dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="metric" x="36" y="118" metric="cadence" units="spm"   dp="0" size="48" outline_width="0" rgb="0,0,0" />
       <component type="text" x="16" y="162" size="24" outline_width="0" rgb="0,0,0">STEPS/MIN</component>
 
       <component type="metric" x="164" y="118" metric="speed"  units="pace_km" format="pace" dp="0" size="48" outline_width="0" rgb="0,0,0" />
@@ -38,8 +38,12 @@
 
   
   </translate> -->
-     <composite x="1900" y="980" name="date_and_time">
-        <component type="datetime" x="0" y="0" format="%Y/%m/%d" size="16" align="right"/>
-        <component type="datetime" x="0" y="24" format="%H:%M:%S"  size="32" align="right"/>
-    </composite>
+
+  <!-- <component x="24" y="980" type="text" rgb="51, 227, 255"  size="48" >FourTimes Club</component> -->
+
+
+  <composite x="1900" y="980" name="date_and_time">
+    <component type="datetime" x="0" y="0"  format="%Y/%m/%d" size="16" align="right"/>
+    <component type="datetime" x="0" y="24"  format="%H:%M:%S"  size="32" align="right"/>
+  </composite>
 </layout>
