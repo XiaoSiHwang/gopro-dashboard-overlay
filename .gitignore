@@ -15,7 +15,7 @@ dist/
 *.out
 
 garmin-fit/
-
+out/
 
 .~*#
 

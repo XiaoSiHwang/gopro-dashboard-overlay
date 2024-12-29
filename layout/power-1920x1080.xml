@@ -4,6 +4,36 @@
         <component type="cairo_circuit_map" size="300" fill="254,103,6" outline="0,0,0" line-width="0.03" loc-size="0.03" loc-fill="255,0,0" loc-outline="255,0,0" rotate="270"/>
       </frame>
   </translate>
+
+  <translate x="1600" y="600">
+    <frame width="300" opacity="1" height="300" bg="51, 193, 255" cr="20">
+      <!-- <component type="icon" x="125" y="2" file="stryd_icon.ico" size="50" invert="false"/> -->
+
+      <component type="metric" x="36" y="28" metric="stryd_airpower"   dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="icon" x="10" y="72" file="airpower.png" size="24" invert="false"/>
+      <component type="text" x="36" y="72" size="24" outline_width="0" rgb="0,0,0">Watts</component>
+
+      <component type="metric" x="164" y="28" metric="stryd_lss"  dp="1" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="icon" x="205" y="72" file="stryd_lss.png" size="24" invert="false"/>
+      <component type="text" x="235" y="72" size="24" outline_width="0" rgb="0,0,0">kN/m</component>
+      
+      <component type="metric" x="36" y="100" metric="stryd_gct" dp="0" size="48" outline_width="0" rgb="0,0,0" />
+       <component type="icon" x="10" y="144" file="stryd_gct.png" size="24" invert="false"/>
+      <component type="text" x="36" y="144" size="24" outline_width="0" rgb="0,0,0">ms</component>
+      
+      <component type="metric" x="164" y="100" metric="stryd_vo"  dp="2" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="icon" x="205" y="144" file="stryd_vo.png" size="24" invert="false"/>
+      <component type="text" x="235" y="144" size="24" outline_width="0" rgb="0,0,0">cm</component>
+
+      <component type="metric" x="36" y="172" metric="stryd_temp" dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="icon" x="10" y="216" file="stryd_temp.png" size="24" invert="false"/>
+      <component type="text" x="36" y="216" size="24" outline_width="0" rgb="0,0,0">°C</component>
+      
+      <component type="metric" x="164" y="172" metric="stryd_humidity"  dp="0" size="48" outline_width="0" rgb="0,0,0" />
+      <component type="icon" x="205" y="216" file="stryd_humidity.png" size="24" invert="false"/>
+      <component type="text" x="235" y="216" size="24" outline_width="0" rgb="0,0,0">%</component>
+    </frame>
+  </translate>
   
   <translate x="24" y="100">
     <frame width="300" opacity="1" height="280" bg="51, 193, 255" cr="20">
@@ -29,18 +59,8 @@
     </frame>
   </translate>
 
-  <!-- <translate x="637" y="24">
-    <frame width="646" opacity="1" height="136" bg="255,255,255" cr="20">
-      <translate x="3" y="70">
-        <component type="bar" cr="20" width="640" height="24" metric="odo"  min="0" fill="82,82,82" outline="82,82,82" zero="255,255,255" bar="30,144,255"  />
-      </translate>
-    </frame>
-
   
-  </translate> -->
-
-  <!-- <component x="24" y="980" type="text" rgb="51, 227, 255"  size="48" >FourTimes Club</component> -->
-
+  <component  x="24" y="980" type="icon" file="fourtimeslogo.webp" invert="false"/>
 
   <composite x="1900" y="980" name="date_and_time">
     <component type="datetime" x="0" y="0"  format="%Y/%m/%d" size="16" align="right"/>

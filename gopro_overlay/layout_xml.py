@@ -309,6 +309,15 @@ def metric_accessor_from(name: str) -> Callable[[Entry], Optional[pint.Quantity]
 
         ## Stryd
         "stryd_power": lambda e: e.stryd_power,
+        "stryd_form_power": lambda e: e.stryd_form_power,
+        "stryd_lss": lambda e: e.stryd_lss,
+        "stryd_cadence": lambda e: e.stryd_cadence,
+        "stryd_gct": lambda e: e.stryd_gct,
+        "stryd_vo": lambda e: e.stryd_vo,
+        "stryd_airpower": lambda e: e.stryd_airpower,
+        "stryd_humidity": lambda e: e.stryd_humidity,
+        "stryd_temp": lambda e: e.stryd_temp,
+        "stryd_ilr": lambda e: e.stryd_ilr,
     }
     if name in accessors:
         return accessors[name]
